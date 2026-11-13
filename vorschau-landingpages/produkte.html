@@ -1798,8 +1798,8 @@ select:focus-visible {
         <nav aria-label="Hauptnavigation">
           <a href="index.html">Start</a>
           <a aria-current="page" href="produkte.html">Produkte</a>
-          <a href="https://testseite-ubungsfirma.web.app/kontakt.html">Kontakt</a>
-          <a class="nav-auth-link" data-auth-action href="https://testseite-ubungsfirma.web.app/login.html">Anmelden</a>
+          <a href="kontakt.html">Kontakt</a>
+          <a class="nav-auth-link" data-auth-action href="login.html">Anmelden</a>
           <a class="cart-link" href="produkte.html#warenkorb">Warenkorb <span class="cart-badge" data-cart-count>0</span></a>
         </nav>
       </div>
@@ -2164,7 +2164,7 @@ select:focus-visible {
     </dialog>
 
     <footer class="site-footer">
-      <p>© <span data-year>2026</span> Solutions Group · Innovative solutions for a better tomorrow · Berlin · <a href="https://testseite-ubungsfirma.web.app/impressum.html">Impressum</a> · <a href="https://testseite-ubungsfirma.web.app/datenschutzerklarung.html">Datenschutzerklärung</a></p>
+      <p>© <span data-year>2026</span> Solutions Group · Innovative solutions for a better tomorrow · Berlin · <a href="impressum.html">Impressum</a> · <a href="datenschutzerklarung.html">Datenschutzerklärung</a></p>
     </footer>
   <script>const products = {
   schreibtisch_milano: { name: "Schreibtisch Milano", price: 749, image: "https://testseite-ubungsfirma.web.app/calisma%20masasi/masa_1_minimal_beyaz_mese.webp" },
@@ -3025,7 +3025,7 @@ if (authAction && loggedInUser) {
   logoutButton.textContent = "Abmelden";
   logoutButton.addEventListener("click", () => {
     localStorage.removeItem(authStorageKey);
-    window.location.href = "https://testseite-ubungsfirma.web.app/login.html";
+    window.location.href = "login.html";
   });
   authAction.replaceWith(logoutButton);
 }
