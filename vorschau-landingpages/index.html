@@ -947,7 +947,14 @@ select:focus-visible {
 }
 </style>
     <script src="https://testseite-ubungsfirma.web.app/js/script.js" defer></script>
-  </head>
+  <style>
+/* Eigener Banner für den Einleitungsbereich der Vorschau-Startseite. */
+.hero {
+  grid-template-columns: minmax(0, 1fr);
+  background: var(--dark) url("banner-startseite.jpg") center / cover no-repeat;
+}
+.hero .hero-content { max-width: 680px; }
+</style></head>
   <body>
     <header class="site-header">
       <div class="nav">
@@ -972,12 +979,6 @@ select:focus-visible {
           <h1>Büromöbel. Events. Webshops.</h1>
           <p>Alles aus einer Hand: Wir richten dein Büro ein, organisieren dein Event und bauen deinen Webshop – professionell, nachhaltig und zum fairen Preis.</p>
           <a class="button" href="produkte.html">Produkte entdecken</a>
-        </div>
-        <div class="hero-art" role="img" aria-label="Abstrakte Illustration eines modernen Arbeitsplatzes">
-          <div class="art-window"></div>
-          <div class="art-desk"></div>
-          <div class="art-chair"></div>
-          <div class="art-plant"></div>
         </div>
       </section>
 
