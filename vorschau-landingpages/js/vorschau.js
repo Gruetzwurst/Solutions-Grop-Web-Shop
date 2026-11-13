@@ -857,7 +857,7 @@ if (authAction && loggedInUser) {
   logoutButton.textContent = "Abmelden";
   logoutButton.addEventListener("click", () => {
     localStorage.removeItem(authStorageKey);
-    window.location.href = "login.html";
+    window.location.href = "login.html?v=vorschau-nav-3";
   });
   authAction.replaceWith(logoutButton);
 }
@@ -872,7 +872,7 @@ if (loginForm) {
 
     if (email === demoEmail && password === demoPassword) {
       localStorage.setItem(authStorageKey, email);
-      window.location.href = "index.html";
+      window.location.href = "index.html?v=vorschau-nav-3";
       return;
     }
 

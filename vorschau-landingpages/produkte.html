@@ -1791,19 +1791,19 @@ select:focus-visible {
   <body>
     <header class="site-header">
       <div class="nav">
-        <a class="brand" href="index.html" aria-label="Solutions Group – Startseite">
+        <a class="brand" href="index.html?v=vorschau-nav-3" aria-label="Solutions Group – Startseite">
           <span class="brand-mark" aria-hidden="true"><img src="https://testseite-ubungsfirma.web.app/images/logo.png" alt="" width="44" height="44"></span>
           <span>Solutions <strong>Group</strong></span>
         </a>
         <nav aria-label="Hauptnavigation">
-          <a href="index.html">Start</a>
-          <a aria-current="page" href="produkte.html">Produkte</a>
-          <a href="kontakt.html">Kontakt</a>
-          <a class="nav-auth-link" data-auth-action href="login.html">Anmelden</a>
-          <a class="cart-link" href="produkte.html#warenkorb">Warenkorb <span class="cart-badge" data-cart-count>0</span></a>
+          <a href="index.html?v=vorschau-nav-3">Start</a>
+          <a aria-current="page" href="produkte.html?v=vorschau-nav-3">Produkte</a>
+          <a href="kontakt.html?v=vorschau-nav-3">Kontakt</a>
+          <a class="nav-auth-link" data-auth-action href="login.html?v=vorschau-nav-3">Anmelden</a>
+          <a class="cart-link" href="produkte.html?v=vorschau-nav-3#warenkorb">Warenkorb <span class="cart-badge" data-cart-count>0</span></a>
         </nav>
       </div>
-    </header><nav class="service-navigation" aria-label="Unsere Bereiche"><a href="produkte.html" aria-current="page">Büromöbel</a><a href="events.html">Events</a><a href="webshops.html">Webshops</a></nav>
+    </header><nav class="service-navigation" aria-label="Unsere Bereiche"><a href="produkte.html?v=vorschau-nav-3" aria-current="page">Büromöbel</a><a href="events.html?v=vorschau-nav-3">Events</a><a href="webshops.html?v=vorschau-nav-3">Webshops</a></nav>
 
     <main>
       <section class="page-hero">
@@ -1814,7 +1814,7 @@ select:focus-visible {
 
       <section class="section container product-catalog" id="produktkatalog">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="index.html">Startseite</a><span aria-hidden="true">/</span><span>Shop</span><span aria-hidden="true">/</span><span data-breadcrumb-current>Alle Produkte</span>
+          <a href="index.html?v=vorschau-nav-3">Startseite</a><span aria-hidden="true">/</span><span>Shop</span><span aria-hidden="true">/</span><span data-breadcrumb-current>Alle Produkte</span>
         </nav>
         <form class="header-search catalog-search" id="headerSearch" role="search">
           <label class="visually-hidden" for="catalogSearch">Produkte suchen</label>
@@ -2164,7 +2164,7 @@ select:focus-visible {
     </dialog>
 
     <footer class="site-footer">
-      <p>© <span data-year>2026</span> Solutions Group · Innovative solutions for a better tomorrow · Berlin · <a href="impressum.html">Impressum</a> · <a href="datenschutzerklarung.html">Datenschutzerklärung</a></p>
+      <p>© <span data-year>2026</span> Solutions Group · Innovative solutions for a better tomorrow · Berlin · <a href="impressum.html?v=vorschau-nav-3">Impressum</a> · <a href="datenschutzerklarung.html?v=vorschau-nav-3">Datenschutzerklärung</a></p>
     </footer>
   <script>const products = {
   schreibtisch_milano: { name: "Schreibtisch Milano", price: 749, image: "https://testseite-ubungsfirma.web.app/calisma%20masasi/masa_1_minimal_beyaz_mese.webp" },
@@ -3025,7 +3025,7 @@ if (authAction && loggedInUser) {
   logoutButton.textContent = "Abmelden";
   logoutButton.addEventListener("click", () => {
     localStorage.removeItem(authStorageKey);
-    window.location.href = "login.html";
+    window.location.href = "login.html?v=vorschau-nav-3";
   });
   authAction.replaceWith(logoutButton);
 }
@@ -3040,7 +3040,7 @@ if (loginForm) {
 
     if (email === demoEmail && password === demoPassword) {
       localStorage.setItem(authStorageKey, email);
-      window.location.href = "index.html";
+      window.location.href = "index.html?v=vorschau-nav-3";
       return;
     }
 
