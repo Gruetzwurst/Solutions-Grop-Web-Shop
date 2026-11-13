@@ -951,9 +951,15 @@ select:focus-visible {
 /* Eigener Banner für den Einleitungsbereich der Vorschau-Startseite. */
 .hero {
   grid-template-columns: minmax(0, 1fr);
-  background: var(--dark) url("banner-startseite.jpg") center / cover no-repeat;
+  background: var(--dark) url("banner-startseite.jpg") right center / contain no-repeat;
 }
 .hero .hero-content { max-width: 680px; }
+@media (max-width: 760px) {
+  .hero {
+    background-position: center top;
+    padding-top: calc(100vw * 187 / 1438 + 32px);
+  }
+}
 </style></head>
   <body>
     <header class="site-header">
