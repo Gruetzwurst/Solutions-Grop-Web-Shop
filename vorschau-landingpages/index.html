@@ -948,36 +948,20 @@ select:focus-visible {
 </style>
     <script src="js/vorschau.js?v=vorschau-nav-3" defer></script>
   <style>
-/* CI-Banner vollständig und proportional darstellen. */
-.hero {
-  position: relative;
-  grid-template-columns: minmax(0, 1fr);
-  min-height: 0;
-  aspect-ratio: 3 / 1;
-  padding: clamp(24px, 3.7vw, 58px) max(24px, calc((100vw - 1112px) / 2));
-  background: #252a29;
-}
-.hero-banner {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.hero .hero-content {
-  position: relative;
-  max-width: 680px;
-  z-index: 1;
-}
-@media (max-width: 1199px) {
-  .hero {
-    display: block;
-    aspect-ratio: auto;
-    padding: 0;
-  }
-  .hero-banner { position: static; height: auto; }
-  .hero .hero-content { padding: 32px 24px 40px; max-width: 728px; }
+/* Proportionaler Banner mit fließender Typografie bis zur Handyansicht. */
+.hero { position: relative; display: block; min-height: 0; padding: 0; background: #252a29; }
+.hero-banner { display: block; width: 100%; height: auto; aspect-ratio: 3 / 1; object-fit: contain; }
+.hero .hero-content { position: absolute; top: 50%; left: max(24px, calc((100vw - 1112px) / 2)); transform: translateY(-50%); width: 56%; max-width: 680px; z-index: 1; }
+.hero h1 { font-size: clamp(26px, 4vw, 58px); margin-bottom: clamp(8px, 1vw, 14px); letter-spacing: -0.025em; }
+.hero .eyebrow { font-size: clamp(9px, 0.83vw, 12px); letter-spacing: clamp(0.6px, 0.104vw, 1.5px); margin-bottom: clamp(6px, 0.69vw, 10px); }
+.hero-content > p:not(.eyebrow) { font-size: clamp(11px, 1.12vw, 16px); margin-bottom: clamp(6px, 1.11vw, 16px); }
+.hero .button { font-size: clamp(11px, 1.11vw, 16px); min-height: clamp(30px, 3.2vw, 46px); margin-top: clamp(4px, 0.83vw, 12px); padding: clamp(6px, 0.76vw, 11px) clamp(10px, 1.39vw, 20px); }
+@media (max-width: 600px) {
+  .hero .hero-content { position: static; transform: none; width: auto; max-width: none; padding: 24px 24px 32px; }
+  .hero h1 { font-size: clamp(30px, 8vw, 42px); }
+  .hero .eyebrow { font-size: 12px; letter-spacing: 1px; margin-bottom: 10px; }
+  .hero-content > p:not(.eyebrow) { font-size: 16px; margin-bottom: 16px; }
+  .hero .button { font-size: 16px; min-height: 46px; padding: 11px 20px; margin-top: 12px; }
 }
 </style></head>
   <body>
