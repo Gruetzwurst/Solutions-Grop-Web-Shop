@@ -946,24 +946,24 @@ select:focus-visible {
   }
 }
 .service-navigation{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:center;padding:14px 24px;background:var(--white);border-bottom:1px solid #e8e9e5}.service-navigation a{font-size:14px;text-decoration:none;font-weight:700}h1,h2,p{overflow-wrap:break-word}</style>
-    <script src="js/vorschau.js?v=vorschau-nav-3" defer></script>
-  </head>
+
+  <link rel="stylesheet" href="css/warenkorb.css?v=warenkorb-1"></head>
   <body>
     <header class="site-header">
       <div class="nav">
-        <a class="brand" href="index.html?v=vorschau-nav-3" aria-label="Solutions Group – Startseite">
+        <a class="brand" href="index.html?v=warenkorb-1" aria-label="Solutions Group – Startseite">
           <span class="brand-mark" aria-hidden="true"><img src="https://testseite-ubungsfirma.web.app/images/logo.png" alt="" width="44" height="44"></span>
           <span>Solutions <strong>Group</strong></span>
         </a>
         <nav aria-label="Hauptnavigation">
-          <a href="index.html?v=vorschau-nav-3">Start</a>
-          <a href="produkte.html?v=vorschau-nav-3">Produkte</a>
-          <a href="kontakt.html?v=vorschau-nav-3">Kontakt</a>
-          <a class="nav-auth-link" data-auth-action href="login.html?v=vorschau-nav-3">Anmelden</a>
-          <a class="cart-link" href="produkte.html?v=vorschau-nav-3#warenkorb">Warenkorb <span class="cart-badge" data-cart-count>0</span></a>
+          <a href="index.html?v=warenkorb-1">Start</a>
+          <a href="produkte.html?v=warenkorb-1">Produkte</a>
+          <a href="kontakt.html?v=warenkorb-1">Kontakt</a>
+          <a class="nav-auth-link" data-auth-action href="login.html?v=warenkorb-1">Anmelden</a>
+          <button class="cart-link" type="button" data-open-cart aria-haspopup="dialog" aria-controls="sharedCartDialog" aria-expanded="false">Warenkorb <span class="cart-badge" data-cart-count>0</span></button>
         </nav>
       </div>
-    </header><nav class="service-navigation" aria-label="Unsere Bereiche"><a href="produkte.html?v=vorschau-nav-3">Büromöbel</a><a href="events.html?v=vorschau-nav-3">Events</a><a href="webshops.html?v=vorschau-nav-3">Webshops</a></nav>
+    </header><nav class="service-navigation" aria-label="Unsere Bereiche"><a href="produkte.html?v=warenkorb-1">Büromöbel</a><a href="events.html?v=warenkorb-1">Events</a><a href="webshops.html?v=warenkorb-1">Webshops</a></nav>
 
     <main>
       <section class="page-hero">
@@ -1002,7 +1002,70 @@ select:focus-visible {
     </main>
 
     <footer class="site-footer">
-      <p>© <span data-year>2026</span> Solutions Group · Innovative solutions for a better tomorrow · Berlin · <a href="impressum.html?v=vorschau-nav-3" aria-current="page">Impressum</a> · <a href="datenschutzerklarung.html?v=vorschau-nav-3">Datenschutzerklärung</a></p>
+      <p>© <span data-year>2026</span> Solutions Group · Innovative solutions for a better tomorrow · Berlin · <a href="impressum.html?v=warenkorb-1" aria-current="page">Impressum</a> · <a href="datenschutzerklarung.html?v=warenkorb-1">Datenschutzerklärung</a></p>
     </footer>
-  </body>
+
+<dialog class="sg-cart-dialog" id="sharedCartDialog" aria-labelledby="sharedCartTitle">
+  <div class="sg-dialog-heading"><h2 id="sharedCartTitle">Deine Auswahl</h2><button class="sg-dialog-close" type="button" data-close-shared-cart aria-label="Warenkorb schließen">Schließen</button></div>
+  <div class="sg-cart-content" data-shared-cart-content></div>
+</dialog>
+<dialog class="sg-request-dialog" id="requestDialog" aria-labelledby="requestTitle">
+  <div class="sg-dialog-heading"><h2 id="requestTitle">Deine Anfrage</h2><button class="sg-dialog-close" type="button" data-close-request aria-label="Anfrage schließen">Schließen</button></div>
+  <form class="contact-form" id="requestForm">
+    <p class="sg-cart-note">Unverbindliche Anfrage für deine vorgemerkten Pakete. Diese Vorschau versendet noch keine Nachrichten.</p>
+    <label for="requestSelection">Ausgewählte Pakete</label><textarea id="requestSelection" name="selection" rows="3" readonly></textarea>
+    <label for="requestName">Name</label><input id="requestName" name="name" autocomplete="name" required>
+    <label for="requestEmail">E-Mail-Adresse</label><input id="requestEmail" name="email" type="email" autocomplete="email" required>
+    <label for="requestMessage">Dein Vorhaben</label><textarea id="requestMessage" name="message" rows="4" required></textarea>
+    <button class="button" type="submit">Demo-Anfrage prüfen</button><p id="requestStatus" class="form-status" role="status" aria-live="polite"></p>
+  </form>
+</dialog>
+<dialog class="store-dialog checkout-dialog" id="checkoutDialog" aria-labelledby="checkoutTitle">
+      <div class="dialog-shell checkout-shell">
+        <form method="dialog" class="dialog-close-form"><button class="dialog-close" aria-label="Kasse schließen">×</button></form>
+        <p class="eyebrow">Büroeinrichtung · Demo</p>
+        <h2 id="checkoutTitle">Demo-Checkout</h2>
+        <ol class="checkout-steps" aria-label="Checkout-Schritte">
+          <li data-checkout-step-indicator="shipping" aria-current="step">Lieferung</li>
+          <li data-checkout-step-indicator="payment">Zahlung</li>
+          <li data-checkout-step-indicator="confirmation">Bestätigung</li>
+        </ol>
+        <form class="checkout-form" id="shippingForm">
+          <h3>Lieferadresse</h3>
+          <div class="checkout-fields">
+            <label>Vor- und Nachname<input name="fullName" autocomplete="name" required></label>
+            <label>E-Mail-Adresse<input name="email" type="email" autocomplete="email" required></label>
+            <label>Straße und Hausnummer<input name="street" autocomplete="street-address" required></label>
+            <label>Postleitzahl<input name="postalCode" autocomplete="postal-code" inputmode="numeric" required></label>
+            <label>Ort<input name="city" autocomplete="address-level2" required></label>
+          </div>
+          <p class="checkout-error" data-shipping-error role="alert"></p>
+          <button class="button" type="submit">Weiter zur Zahlung</button>
+        </form>
+        <form class="checkout-form" id="paymentForm" hidden>
+          <h3>Zahlungsmethode</h3>
+          <label>Zahlungsart<select name="method"><option value="card">Kreditkarte (Simulation)</option><option value="invoice">Rechnung (Simulation)</option></select></label>
+          <div data-card-fields>
+            <label>Kartennummer (Demo)<input name="cardNumber" inputmode="numeric" autocomplete="off" pattern="[0-9 ]{16,23}" maxlength="23" placeholder="0000 0000 0000 0000" required></label>
+            <div class="checkout-fields checkout-card-fields">
+              <label>Gültig bis<input name="expiry" inputmode="numeric" autocomplete="off" pattern="(0[1-9]|1[0-2])\/[0-9]{2}" placeholder="MM/JJ" required></label>
+              <label>Prüfnummer<input name="cvv" inputmode="numeric" autocomplete="off" pattern="[0-9]{3,4}" maxlength="4" placeholder="123" required></label>
+            </div>
+          </div>
+          <p class="checkout-demo-warning">Nur eine Bestellsimulation: Keine Kartendaten werden gespeichert oder an einen Zahlungsdienst gesendet.</p>
+          <p class="checkout-error" data-payment-error role="alert"></p>
+          <div class="checkout-form-actions"><button class="button button-secondary" type="button" data-checkout-back>Zurück</button><button class="button" type="submit">Kostenpflichtig bestellen (Demo)</button></div>
+        </form>
+        <section class="checkout-confirmation" data-order-confirmation hidden aria-live="polite">
+          <p class="eyebrow">Vielen Dank</p>
+          <h3>Deine Demo-Bestellung ist bestätigt.</h3>
+          <p data-order-id></p>
+          <p data-order-summary></p>
+          <button class="button" type="button" data-close-checkout>Weiter einkaufen</button>
+        </section>
+      </div>
+    </dialog>
+<script src="js/vorschau.js?v=warenkorb-1" defer></script>
+<script src="js/warenkorb.js?v=warenkorb-1" defer></script>
+</body>
 </html>
