@@ -95,7 +95,7 @@
       const empty = element('div', undefined, 'sg-cart-empty');
       empty.append(element('h3', 'Dein Warenkorb wartet auf gute Ideen'), element('p', 'Entdecke Büroeinrichtung und merke dir passende Pakete für Events und Webshops vor.'));
       const shop = element('a', 'Produkte entdecken', 'button');
-      shop.href = 'produkte.html?v=kontakt-logo-20261120';
+      shop.href = 'produkte.html?v=browserlogo-weiss-20261120';
       shop.addEventListener('click', closeCart);
       shop.setAttribute('data-cart-shop', '');
       empty.append(shop);
