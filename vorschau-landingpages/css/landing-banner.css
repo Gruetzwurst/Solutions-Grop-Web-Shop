@@ -1,0 +1,18 @@
+/* Proportionaler Banner mit fließender Typografie bis zur Handyansicht. */
+.sg-landing-banner { position: relative; display: block; min-height: 0; padding: 0; background: #252a29; }
+.hero-banner { display: block; width: 100%; height: auto; aspect-ratio: 3 / 1; object-fit: contain; }
+.sg-landing-banner .hero-content { position: absolute; top: 50%; left: max(24px, calc((100vw - 1112px) / 2)); transform: translateY(-50%); width: 56%; max-width: 680px; z-index: 1; }
+.sg-landing-banner h1 { font-size: clamp(26px, 4vw, 58px); margin-bottom: clamp(8px, 1vw, 14px); letter-spacing: -0.025em; }
+.sg-landing-banner .eyebrow { font-size: clamp(9px, 0.83vw, 12px); letter-spacing: clamp(0.6px, 0.104vw, 1.5px); margin-bottom: clamp(6px, 0.69vw, 10px); }
+.hero-content > p:not(.eyebrow) { font-size: clamp(11px, 1.12vw, 16px); margin-bottom: clamp(6px, 1.11vw, 16px); }
+.sg-landing-banner .button { font-size: clamp(11px, 1.11vw, 16px); min-height: clamp(30px, 3.2vw, 46px); margin-top: clamp(4px, 0.83vw, 12px); padding: clamp(6px, 0.76vw, 11px) clamp(10px, 1.39vw, 20px); }
+@media (max-width: 600px) {
+  .sg-landing-banner .hero-content { position: static; transform: none; width: auto; max-width: none; padding: 24px 24px 32px; }
+  .sg-landing-banner h1 { font-size: clamp(30px, 8vw, 42px); }
+  .sg-landing-banner .eyebrow { font-size: 12px; letter-spacing: 1px; margin-bottom: 10px; }
+  .hero-content > p:not(.eyebrow) { font-size: 16px; margin-bottom: 16px; }
+  .sg-landing-banner .button { font-size: 16px; min-height: 46px; padding: 11px 20px; margin-top: 12px; }
+}
+
+.sg-landing-banner .hero-content > .preview-label { font-size: clamp(9px, 0.83vw, 12px); margin: clamp(4px, 0.69vw, 10px) 0 0; color: #d1d7d0; }
+@media (max-width: 600px) { .sg-landing-banner .hero-content > .preview-label { font-size: 12px; margin-top: 12px; } }
