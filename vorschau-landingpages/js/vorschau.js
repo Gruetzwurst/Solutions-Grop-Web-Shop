@@ -853,7 +853,7 @@ if (authAction && loggedInUser) {
   logoutButton.textContent = "Abmelden";
   logoutButton.addEventListener("click", () => {
     localStorage.removeItem(authStorageKey);
-    window.location.href = "login.html?v=feedback-20261120";
+    window.location.href = "login.html?v=banner-kompakt-20261120";
   });
   authAction.replaceWith(logoutButton);
 }
@@ -868,7 +868,7 @@ if (loginForm) {
 
     if (email === demoEmail && password === demoPassword) {
       localStorage.setItem(authStorageKey, email);
-      window.location.href = "index.html?v=feedback-20261120";
+      window.location.href = "index.html?v=banner-kompakt-20261120";
       return;
     }
 

@@ -16,3 +16,6 @@
 
 .sg-landing-banner .hero-content > .preview-label { font-size: clamp(9px, 0.83vw, 12px); margin: clamp(4px, 0.69vw, 10px) 0 0; color: #d1d7d0; }
 @media (max-width: 600px) { .sg-landing-banner .hero-content > .preview-label { font-size: 12px; margin-top: 12px; } }
+
+/* Gleiche Bild- und Schriftgröße, nur weniger Höhe auf Unterseiten. */
+.sg-landing-banner .hero-banner { aspect-ratio: 4 / 1; object-fit: cover; object-position: center; }
